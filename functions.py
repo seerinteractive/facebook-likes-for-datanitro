@@ -6,7 +6,7 @@ import urllib2
 import json
 
 def facebook_likes(url):
-    facebook_url = "https://graph.facebook.com/?ids=" + url
+    facebook_url = "https://graph.facebook.com/?ids=232823373570847" + url
     raw_data = urllib2.urlopen(facebook_url).read()
     formatted_data = json.loads(raw_data)
     likes = formatted_data[url].get('shares', 0)
